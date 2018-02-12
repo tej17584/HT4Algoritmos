@@ -24,10 +24,11 @@ public class MainCalc {
 		try {
 			// Apertura del fichero y creacion de BufferedReader para poder
 			// hacer una lectura comoda (disponer del metodo readLine()).
-			archivo = new File("datos.txt");
+			archivo = new File(
+					"datos.txt");
 			fr = new FileReader(archivo);
 			br = new BufferedReader(fr);
-			Calc calculadora = new Calc();
+			Calc calculadora = new Calc("1");
 			// Lectura del ficheroSi
 			String linea;
 			String lineaOperacion = "";

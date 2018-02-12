@@ -13,13 +13,17 @@ public class Calc   {
 	/**
 	 * ArrayList que se utiliza para calcular las operaciones
 	 */
+         StackFactory stackF= new StackFactory();
+         
 	private Stack<String> miStack;
 
 	/**
 	 * Constructor de la clase
+     * @param forma
 	 */
-	public Calc() {
-		miStack = new StackArrayList<>();
+	public Calc(String forma) {
+		
+                miStack=stackF.getImplementacion(forma);
 	}
 
 	/**
