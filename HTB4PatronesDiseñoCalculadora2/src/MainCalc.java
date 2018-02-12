@@ -3,6 +3,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -13,6 +14,7 @@ import java.io.IOException;
 /**
  *
  * @author Jose Tejada
+ * @author Andres Urizar
  */
 public class MainCalc {
     
@@ -20,6 +22,7 @@ public class MainCalc {
 		File archivo = null;
 		FileReader fr = null;
 		BufferedReader br = null;
+                Scanner sc = new Scanner(System.in);
 
 		try {
 			// Apertura del fichero y creacion de BufferedReader para poder
@@ -36,7 +39,38 @@ public class MainCalc {
 				lineaOperacion = lineaOperacion + linea;
 			// System.out.println(lineaOperacion);
 			// System.out.println(calculadora.getMiStack());
-			double result = calculadora.operar(lineaOperacion);
+                        boolean x = true;
+                        while(x){
+                            System.out.println("Menú de opciones");
+                            System.out.println("1. Arraylist");
+                            System.out.println("2. Vector");
+                            System.out.println("3. Lista Single");
+                            System.out.println("4. Lista Circular");
+                            System.out.println("5. Lista Doble");
+                            System.out.println("6. Salir");
+                            int op =  sc.nextInt();
+                            if((op<1)||(op>6)){  //Opcion de validacion
+                                System.out.println("La opción que seleccionó no se encuentra en el menú");
+                            }else
+                            if(op==6){   //Opcion si quiere salir del programa
+                                System.out.println("Gracias por utilizar nuestra calculadora");
+                                x = false;
+                            }else{    //Opcion si eligio alguna de las opciones
+                                
+                                System.out.println("Desea realizar otro calculo? 1. Si 2.No");
+                                int op1 = sc.nextInt();
+                                if((op1>2)||(op1<1)){
+                                    System.out.println("No eligió ninguna de las opciones, se tomara como un No");
+                                    System.out.println("Gracias por utilizar nuestra calculadora");
+                                    x=false;
+                                }else
+                                if(op1==2){
+                                    System.out.println("Gracias por utilizar nuestra calculadora");
+                                    x=false;
+                                }
+                            }
+                        }
+                        double result = calculadora.operar(lineaOperacion);
 			if (Double.isNaN(result)) {
 				System.out.println("La operación no devuelve un resultado válido o no puede llevarse a cabo.");
 			} else {

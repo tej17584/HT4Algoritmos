@@ -7,7 +7,7 @@
 /**
  *Esta es la clase factory
  * @author Jose Tejada
- * @author Andrez urizar
+ * @author Andres urizar
  */
 public class StackFactory {
     public Stack getImplementacion(String forma){
