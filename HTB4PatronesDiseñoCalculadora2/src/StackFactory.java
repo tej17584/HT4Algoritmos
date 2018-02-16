@@ -14,6 +14,9 @@ public class StackFactory {
         if ("1".equals(forma)) {
             return new StackArrayList();
         }
+        else if (forma.equals("2")) {
+            return new StackVector();
+        }
         return null;
     }
 }

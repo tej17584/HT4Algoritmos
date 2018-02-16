@@ -31,7 +31,7 @@ public class MainCalc {
 					"datos.txt");
 			fr = new FileReader(archivo);
 			br = new BufferedReader(fr);
-			Calc calculadora = new Calc("1");
+			
 			// Lectura del ficheroSi
 			String linea;
 			String lineaOperacion = "";
@@ -56,7 +56,15 @@ public class MainCalc {
                                 System.out.println("Gracias por utilizar nuestra calculadora");
                                 x = false;
                             }else{    //Opcion si eligio alguna de las opciones
-                                
+                                if (op==1) {
+                                    Calc calculadora = new Calc("1");
+                                    double result = calculadora.operar(lineaOperacion);
+			if (Double.isNaN(result)) {
+				System.out.println("La operación no devuelve un resultado válido o no puede llevarse a cabo.");
+			} else {
+				System.out.println("Resultado: " + calculadora.operar(lineaOperacion));
+			}
+                                }
                                 System.out.println("Desea realizar otro calculo? 1. Si 2.No");
                                 int op1 = sc.nextInt();
                                 if((op1>2)||(op1<1)){
@@ -70,12 +78,7 @@ public class MainCalc {
                                 }
                             }
                         }
-                        double result = calculadora.operar(lineaOperacion);
-			if (Double.isNaN(result)) {
-				System.out.println("La operación no devuelve un resultado válido o no puede llevarse a cabo.");
-			} else {
-				System.out.println("Resultado: " + calculadora.operar(lineaOperacion));
-			}
+                        
 
 		} catch (IOException e) {
 		} /*
