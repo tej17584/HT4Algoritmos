@@ -12,10 +12,17 @@
 public class StackFactory {
     public Stack getImplementacion(String forma){
         if ("1".equals(forma)) {
+            System.out.println("USASTE ARRAYLIST");
             return new StackArrayList();
+            
         }
         else if (forma.equals("2")) {
+            System.out.println("USASTE Vector");
             return new StackVector();
+        }
+        else if (forma.equals("3")) {
+            System.out.println("USASTE List single");
+            return new SinglyLinkedList();
         }
         return null;
     }

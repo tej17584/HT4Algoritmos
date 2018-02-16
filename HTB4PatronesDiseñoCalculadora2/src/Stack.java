@@ -10,6 +10,7 @@ import static java.lang.StrictMath.E;
 /**
  *
  * @author Jose Tejada
+ * @param <E>
  */
 public interface Stack<E> {
     

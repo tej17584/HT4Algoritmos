@@ -56,14 +56,39 @@ public class MainCalc {
                                 System.out.println("Gracias por utilizar nuestra calculadora");
                                 x = false;
                             }else{    //Opcion si eligio alguna de las opciones
-                                if (op==1) {
-                                    Calc calculadora = new Calc("1");
-                                    double result = calculadora.operar(lineaOperacion);
-			if (Double.isNaN(result)) {
-				System.out.println("La operación no devuelve un resultado válido o no puede llevarse a cabo.");
-			} else {
-				System.out.println("Resultado: " + calculadora.operar(lineaOperacion));
-			}
+                                switch (op) {
+                                    case 1:
+                                        {
+                                            Calc calculadora = new Calc("1");
+                                            double result = calculadora.operar(lineaOperacion);
+                                            if (Double.isNaN(result)) {
+                                                System.out.println("La operación no devuelve un resultado válido o no puede llevarse a cabo.");
+                                            } else {
+                                                System.out.println("Resultado: " + calculadora.operar(lineaOperacion));
+                                            }                   break;
+                                        }
+                                    case 2:
+                                        {
+                                            Calc calculadora = new Calc("2");
+                                            double result = calculadora.operar(lineaOperacion);
+                                            if (Double.isNaN(result)) {
+                                                System.out.println("La operación no devuelve un resultado válido o no puede llevarse a cabo.");
+                                            } else {
+                                                System.out.println("Resultado: " + calculadora.operar(lineaOperacion));
+                                            }                   break;
+                                        }
+                                    case 3:
+                                        {
+                                            Calc calculadora = new Calc("3");
+                                            double result = calculadora.operar(lineaOperacion);
+                                            if (Double.isNaN(result)) {
+                                                System.out.println("La operación no devuelve un resultado válido o no puede llevarse a cabo.");
+                                            } else {
+                                                System.out.println("Resultado: " + calculadora.operar(lineaOperacion));
+                                            }                   break;
+                                        }
+                                    default:
+                                        break;
                                 }
                                 System.out.println("Desea realizar otro calculo? 1. Si 2.No");
                                 int op1 = sc.nextInt();
