@@ -5,10 +5,10 @@
  * PostFix.
  *
  * @author Jose Tejada
- * @author Javier Anleu
+ * @author Andres Urizar
  * @version 1.0
  */
-public class Calc   {
+public class Calc implements Calculadora {
 
 	/**
 	 * ArrayList que se utiliza para calcular las operaciones
