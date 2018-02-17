@@ -23,6 +23,9 @@ public class StackFactory {
         else if (forma.equals("3")) {
             System.out.println("USASTE List single");
             return new SinglyLinkedList();
+        }else if(forma.equals("4")){
+            System.out.print("USASTE List Circular");
+            return new CircularList();
         }
         return null;
     }
