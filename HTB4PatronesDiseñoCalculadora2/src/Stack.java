@@ -1,5 +1,4 @@
 
-import static java.lang.StrictMath.E;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -8,12 +7,13 @@ import static java.lang.StrictMath.E;
  */
 
 /**
- *
- * @author Jose Tejada
- * @param <E>
+  * @author Jose Tejada
+ * @author Andres Urizar
+ * @version 1.0
+ * @param <E> un genérico
  */
 public interface Stack<E> {
-    
+    //Métodos de la interfaz Stack
 	public void push(E item);
 	// pre:
 	// post: item is added to stack

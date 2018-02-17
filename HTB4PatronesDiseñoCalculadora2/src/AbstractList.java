@@ -5,18 +5,22 @@
  */
 
 /**
- *
  * @author Jose Tejada
- * @param <E>
+ * @author Andres Urizar
+ * @version 1.0
+ * @param <E> es un genéric
  */
 public abstract class AbstractList<E> implements List<E>{
+    /**
+     * Este es el constructor
+     */
    public AbstractList()
    // post: does nothing
    {
    }
     /**
-     *
-     * @return
+     *Retorna true si la lista no tiene elementos
+     * @return un booelano
      */
     @Override
    public boolean isEmpty()
@@ -25,6 +29,10 @@ public abstract class AbstractList<E> implements List<E>{
       return size() == 0;
    }
    
+   /**
+    * Retorna true si la lista no está vacía
+    * @return un booelano
+    */
    @Override
    public boolean empty(){
        return size()==0;

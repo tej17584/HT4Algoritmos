@@ -14,37 +14,52 @@ public class Calc implements Calculadora {
 	 * ArrayList que se utiliza para calcular las operaciones
 	 */
          StackFactory stackF= new StackFactory();
+	 private Stack<String> miStack;
+         private static Calc miCalc;
          
-	private Stack<String> miStack;
-
 	/**
 	 * Constructor de la clase
-     * @param forma
+         * @param forma es la forma de la implementacion que va a devolver
 	 */
-	public Calc(String forma) {
+	private Calc(String forma) {
 		
                 miStack=stackF.getImplementacion(forma);
 	}
+        /**
+         * Este static es el getCalc
+         * @param forma la forma de la implementacion
+         * @return una instancia unica de cada objeto
+         */
+        public static Calc getCalc(String forma){
+            if (miCalc==null) {
+                miCalc= new Calc(forma);
+            }
+            return miCalc;
+        }
 
 	/**
-	 * @return the miStack
-	 */
+         * Este método retorna un stack
+         * @return un objeto tipo String de mi 
+         */
 	public Stack<String> getMiStack() {
 		return miStack;
 	}
 
 	/**
-	 * @param miStack
-	 *            the miStack to set
-	 */
+         * Este método setea un STack
+         * @param miStack un objeto tipo Stack
+         */
 	public void setMiStack(Stack<String> miStack) {
 		this.miStack = miStack;
 	}
 
 	/**
-	 * Es el método que se encarga de calcular el resultado de la operación en el
+         *  * Es el método que se encarga de calcular el resultado de la operación en el
 	 * archivo de texto por medio de los métodos descritos anteriormente
-	 */
+         * @param expresion es la expresion a operar
+         * @return un double con el resultado
+         */
+         @Override
 	public double operar(String expresion) {
 		double resultado = 0;
 		String subcadena = "";

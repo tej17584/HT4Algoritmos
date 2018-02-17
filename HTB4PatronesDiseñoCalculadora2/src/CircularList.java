@@ -5,8 +5,10 @@
  */
 
 /**
- *
- * @author alber
+ * Clase circular
+ * @author Jose Tejada
+ * @author Andres Urizar
+ * @version 1.0
  */
 public class CircularList<E> extends AbstractList<E>{
 
@@ -22,7 +24,10 @@ public class CircularList<E> extends AbstractList<E>{
         count = 0;
     }
     
-
+    /**
+     * método para agregar al inicio
+     * @param value un genérico
+     */
     @Override
     public void addFirst(E value) {
        Node<E> temp = new Node<E>(value);
@@ -35,13 +40,19 @@ public class CircularList<E> extends AbstractList<E>{
        }
        count++;
     }
-
+    /**
+     * método para agregar al tail
+     * @param value un genérico para el tail
+     */
     @Override
     public void addLast(E value) {
        addFirst(value);
        tail = tail.next();
     }
-
+    /**
+     * método para remover el primer elemento
+     * @return un genérico E
+     */
     @Override
     public E removeFirst() {
         Node<E> finger = tail;
@@ -58,32 +69,51 @@ public class CircularList<E> extends AbstractList<E>{
         count--;
         return temp.value();
     }
-
+    /**
+     * el método contains heredado de la interfaz
+     * @param value un genérico
+     * @return un boolean con true o false
+     */
     @Override
     public boolean contains(E value) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    /**
+     * Método heredado de la interfaz de Stack, es para pushear un valor
+     * @param item un genérico para agregar
+     */
     @Override
     public void push(E item) {
        addFirst(item);
     }
-
+    /**
+     * Retira el primer elemento de la lista lo retorna y lo borra
+     * @return un genérico E
+     */
     @Override
     public E pop() {
         return  removeFirst();
     }
-
+    /**
+     * Selecciona el primer elemento
+     * @return un genérico
+     */
     @Override
     public E peek() {
         return getFirst();
     }
-
+    /**
+     * Un método heredado de size
+     * @return un entero
+     */
     @Override
     public int size() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    /**
+     * getFirst elemento es el método para obtener el primer elemento
+     * @return un genérico E
+     */
     @Override
     public E getFirst() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

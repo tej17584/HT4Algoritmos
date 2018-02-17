@@ -9,9 +9,10 @@ import java.util.Iterator;
  */
 
 /**
- *
- * @author Jose Tejada
- * @param <E>
+  * @author Jose Tejada
+ * @author Andres Urizar
+ * @version 1.0
+ * @param <E> un genérico
  */
 public class SinglyLinkedList<E> extends AbstractList<E>{
 
@@ -24,24 +25,33 @@ public class SinglyLinkedList<E> extends AbstractList<E>{
       head = null;
       count = 0;
    }
-   
+   /**
+    * Un size para ver el número
+    * @return un entero
+    */
      @Override
    public int size()
    // post: returns number of elements in list
   {
     return count;
   }
-  
+  /**
+   * Agrega un valor al inicio
+   * @param value un genérico
+   */
      @Override
   public void addFirst(E value)
   // post: value is added to beginning of list
   {
      // note order that things happen:
      // head is parameter, then assigned
-     head = new Node<E>(value, head);
+     head = new Node<>(value, head);
      count++;
   }
-  
+  /**
+   * un removeFirst para tomar el primer elemento
+   * @return un genérico
+   */
      @Override
   public E removeFirst()
   // pre: list is not empty
@@ -52,7 +62,10 @@ public class SinglyLinkedList<E> extends AbstractList<E>{
      count--;
      return temp.value();
   }
-  
+  /**
+   * un getFirst para tomar el primer elemento
+   * @return un genérico
+   */
      @Override
   public E getFirst()
   // pre: list is not empty
@@ -60,7 +73,10 @@ public class SinglyLinkedList<E> extends AbstractList<E>{
   {
       return head.value();
   }
-  
+  /**
+   * Método para agregar al final
+   * @param value un valor genérico E
+   */
      @Override
   public void addLast(E value)
   // post: adds value to end of list
@@ -83,7 +99,11 @@ public class SinglyLinkedList<E> extends AbstractList<E>{
 	  
    }
    
-   
+   /**
+    * método contains
+    * @param value un genérico
+    * @return un booleano
+    */
      @Override
    public boolean contains(E value)
    // pre: value is not null
@@ -101,8 +121,8 @@ public class SinglyLinkedList<E> extends AbstractList<E>{
    
    //Métodos de la clase Stack 
 /**
- * 
- * @param item 
+ * Estos métodos son de las interfaces heredas
+ * @param item un genérico E
  */
     @Override
     public void push(E item) {

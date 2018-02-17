@@ -8,9 +8,10 @@ import java.util.Vector;
  */
 
 /**
- *
  * @author Jose Tejada
- * @param <E>
+ * @author Andres Urizar
+ * @version 1.0
+ * @param <E> un genérico
  */
 public class StackVector<E> implements Stack<E>{
     protected Vector<E> data;
@@ -22,40 +23,41 @@ public class StackVector<E> implements Stack<E>{
     }
     
     /**
-     * 
-     * @param item 
+     *push para un valor del stacj
+     * @param item un genérico E
      */
     @Override
     public void push(E item) {
        data.addElement(item);
     }
     /**
-     * 
-     * @return 
+     * pop a un valor del stack
+     * @return un genérico E
      */
     @Override
     public E pop() {
       return data.remove(size()-1);
     }
     /**
-     * 
-     * @return 
+     * peek al stack
+     * @return un genérico E
      */
     @Override
     public E peek() {
         return data.get(size()-1);
     }
     /**
-     * 
-     * @return 
+     * ver si el vector está vacío
+     * @return un genérico E
      */
     @Override
     public boolean empty() {
         return size()==0;
     }
-    /**
-     * 
-     */
+   /**
+    * consultar el tamaño del array
+    * @return un int con el tamaño
+    */
     @Override
     public int size() {
        return data.size();

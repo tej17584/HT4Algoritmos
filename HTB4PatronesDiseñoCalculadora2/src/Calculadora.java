@@ -5,15 +5,16 @@
  */
 
 /**
- *
+ *Esta es la interfaz de calculadora
  * @author Jose Tejada
- * @authot Andres Urizar
+ * @author Andres Urizar
+ * @version 1.0
  */
 public interface Calculadora {
     
     /**
-     * Metodo operar
-     * @param expresion
+     * Metodo operar que se le dará cuerpo luego
+     * @param expresion es la expresion a operar
      * @return Resultado de la operacion dependiendo si es suma, resta, multiplicacion o division
      */
     double operar(String expresion);

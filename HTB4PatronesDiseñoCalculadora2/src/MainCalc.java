@@ -12,9 +12,10 @@ import java.util.Scanner;
  */
 
 /**
- *
+ *Clase MAin donde todo corre
  * @author Jose Tejada
  * @author Andres Urizar
+ * @version 1.0
  */
 public class MainCalc {
     
@@ -59,52 +60,53 @@ public class MainCalc {
                                 switch (op) {
                                     case 1:
                                         {
-                                            Calc calculadora = new Calc("1");
-                                            double result = calculadora.operar(lineaOperacion);
+                                           
+                                            Calc C1= Calc.getCalc("1");
+                                            double result = C1.operar(lineaOperacion);
                                             if (Double.isNaN(result)) {
                                                 System.out.println("La operación no devuelve un resultado válido o no puede llevarse a cabo.");
                                             } else {
-                                                System.out.println("Resultado: " + calculadora.operar(lineaOperacion));
+                                                System.out.println("Resultado: " + C1.operar(lineaOperacion));
                                             }                   break;
                                         }
                                     case 2:
                                         {
-                                            Calc calculadora = new Calc("2");
-                                            double result = calculadora.operar(lineaOperacion);
+                                            Calc C2 = Calc.getCalc("2");
+                                            double result = C2.operar(lineaOperacion);
                                             if (Double.isNaN(result)) {
                                                 System.out.println("La operación no devuelve un resultado válido o no puede llevarse a cabo.");
                                             } else {
-                                                System.out.println("Resultado: " + calculadora.operar(lineaOperacion));
+                                                System.out.println("Resultado: " + C2.operar(lineaOperacion));
                                             }                   break;
                                         }
                                     case 3:
                                         {
-                                            Calc calculadora = new Calc("3");
-                                            double result = calculadora.operar(lineaOperacion);
+                                            Calc C3 = Calc.getCalc("3");
+                                            double result = C3.operar(lineaOperacion);
                                             if (Double.isNaN(result)) {
                                                 System.out.println("La operación no devuelve un resultado válido o no puede llevarse a cabo.");
                                             } else {
-                                                System.out.println("Resultado: " + calculadora.operar(lineaOperacion));
+                                                System.out.println("Resultado: " + C3.operar(lineaOperacion));
                                             }                   break;
                                         }
                                     case 4:
                                     {
-                                        Calc calculadora = new Calc("4");
-                                        double result = calculadora.operar(lineaOperacion);
+                                        Calc C4= Calc.getCalc("4");
+                                        double result = C4.operar(lineaOperacion);
                                         if (Double.isNaN(result)) {
                                                 System.out.println("La operación no devuelve un resultado válido o no puede llevarse a cabo.");
                                             } else {
-                                                System.out.println("Resultado: " + calculadora.operar(lineaOperacion));
+                                                System.out.println("Resultado: " + C4.operar(lineaOperacion));
                                             }                   break;
                                     }
                                     case 5:
                                     { 
-                                        Calc calculadora = new Calc("5");
-                                        double result = calculadora.operar(lineaOperacion);
+                                        Calc C5= Calc.getCalc("5");
+                                        double result = C5.operar(lineaOperacion);
                                         if (Double.isNaN(result)) {
                                                 System.out.println("La operación no devuelve un resultado válido o no puede llevarse a cabo.");
                                             } else {
-                                                System.out.println("Resultado: " + calculadora.operar(lineaOperacion));
+                                                System.out.println("Resultado: " + C5.operar(lineaOperacion));
                                             }                   break;
                                         
                                     }

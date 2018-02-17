@@ -7,9 +7,15 @@
 /**
  *Esta es la clase factory
  * @author Jose Tejada
- * @author Andres urizar
+ * @author Andres Urizar
+ * @version 1.0
  */
 public class StackFactory {
+    /**
+     * Este es el factoru para la implementacion
+     * @param forma la forma de la implementacion
+     * @return un objeto de tipo STack para ser usado
+     */
     public Stack getImplementacion(String forma){
         if ("1".equals(forma)) {
             System.out.println("USASTE ARRAYLIST");

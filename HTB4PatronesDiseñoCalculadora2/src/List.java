@@ -10,8 +10,11 @@ import java.util.Iterator;
  */
 
 /**
- *
+ * Interfas List
  * @author Jose Tejada
+ * @author Andres Urizar
+ * @version 1.0
+ * @param <E> un genérico
  */
 public interface List<E> extends Stack<E>{
     @Override
@@ -20,8 +23,6 @@ public interface List<E> extends Stack<E>{
 
    public boolean isEmpty();
    // post: returns true iff list has no elements
-
-  
 
    public void addFirst(E value);
    // post: value is added to beginning of list
@@ -33,16 +34,10 @@ public interface List<E> extends Stack<E>{
    // pre: list is not empty
    // post: returns first value in list
 
- 
-
    public E removeFirst();
    // pre: list is not empty
    // post: removes first value from list
-
-  
-
- 
-
+   
    public boolean contains(E value);
    // pre: value is not null
    // post: returns true iff list contains an object equal to value
