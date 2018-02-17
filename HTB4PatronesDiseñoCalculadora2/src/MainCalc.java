@@ -97,6 +97,17 @@ public class MainCalc {
                                                 System.out.println("Resultado: " + calculadora.operar(lineaOperacion));
                                             }                   break;
                                     }
+                                    case 5:
+                                    { 
+                                        Calc calculadora = new Calc("5");
+                                        double result = calculadora.operar(lineaOperacion);
+                                        if (Double.isNaN(result)) {
+                                                System.out.println("La operación no devuelve un resultado válido o no puede llevarse a cabo.");
+                                            } else {
+                                                System.out.println("Resultado: " + calculadora.operar(lineaOperacion));
+                                            }                   break;
+                                        
+                                    }
                                     default:
                                         break;
                                 }
