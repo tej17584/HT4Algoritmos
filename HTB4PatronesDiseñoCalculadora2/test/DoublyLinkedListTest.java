@@ -36,31 +36,7 @@ public class DoublyLinkedListTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of addFirst method, of class DoublyLinkedList.
-     */
-    @Test
-    public void testAddFirst() {
-        System.out.println("addFirst");
-        Object value = null;
-        DoublyLinkedList instance = new DoublyLinkedList();
-        instance.addFirst(value);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of addLast method, of class DoublyLinkedList.
-     */
-    @Test
-    public void testAddLast() {
-        System.out.println("addLast");
-        Object value = null;
-        DoublyLinkedList instance = new DoublyLinkedList();
-        instance.addLast(value);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+   
 
     /**
      * Test of removeLast method, of class DoublyLinkedList.
@@ -69,26 +45,17 @@ public class DoublyLinkedListTest {
     public void testRemoveLast() {
         System.out.println("removeLast");
         DoublyLinkedList instance = new DoublyLinkedList();
-        Object expResult = null;
+        Object expResult = "1";
+        instance.addLast("1");
         Object result = instance.removeLast();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        if(!(result == expResult)){
+            fail("No funciono");
+        }
     }
 
-    /**
-     * Test of size method, of class DoublyLinkedList.
-     */
-    @Test
-    public void testSize() {
-        System.out.println("size");
-        DoublyLinkedList instance = new DoublyLinkedList();
-        int expResult = 0;
-        int result = instance.size();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+   
 
     /**
      * Test of getFirst method, of class DoublyLinkedList.
@@ -97,11 +64,14 @@ public class DoublyLinkedListTest {
     public void testGetFirst() {
         System.out.println("getFirst");
         DoublyLinkedList instance = new DoublyLinkedList();
-        Object expResult = null;
+        Object expResult = "1";
+        instance.addFirst("1");
         Object result = instance.getFirst();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       if(!(result == expResult)){
+            fail("No funciono");
+        }
     }
 
     /**
@@ -110,11 +80,15 @@ public class DoublyLinkedListTest {
     @Test
     public void testPush() {
         System.out.println("push");
-        Object item = null;
+        Object item = "1";
         DoublyLinkedList instance = new DoublyLinkedList();
         instance.push(item);
+        String x = "1";
+        assertEquals(instance.peek(), x );
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        if (!(instance.peek() == x)){
+            fail("No funciono");
+        }
     }
 
     /**
@@ -124,11 +98,14 @@ public class DoublyLinkedListTest {
     public void testPop() {
         System.out.println("pop");
         DoublyLinkedList instance = new DoublyLinkedList();
-        Object expResult = null;
+         Object expResult = "1";
+        instance.push(expResult);
         Object result = instance.pop();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        if(!(result == expResult)){
+            fail("No funciono");
+        }
     }
 
     /**
@@ -138,40 +115,14 @@ public class DoublyLinkedListTest {
     public void testPeek() {
         System.out.println("peek");
         DoublyLinkedList instance = new DoublyLinkedList();
-        Object expResult = null;
+        Object expResult = "1";
+        instance.push("3");
+        instance.push("1");
         Object result = instance.peek();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        if(!(result == expResult)){
+            fail("No funciono");
+        }
     }
-
-    /**
-     * Test of removeFirst method, of class DoublyLinkedList.
-     */
-    @Test
-    public void testRemoveFirst() {
-        System.out.println("removeFirst");
-        DoublyLinkedList instance = new DoublyLinkedList();
-        Object expResult = null;
-        Object result = instance.removeFirst();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of contains method, of class DoublyLinkedList.
-     */
-    @Test
-    public void testContains() {
-        System.out.println("contains");
-        Object value = null;
-        DoublyLinkedList instance = new DoublyLinkedList();
-        boolean expResult = false;
-        boolean result = instance.contains(value);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
 }

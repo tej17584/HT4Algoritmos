@@ -47,21 +47,12 @@ public class SinglyLinkedListTest {
         int result = instance.size();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+         if(!(result == expResult)){
+            fail("No funciono");
+        }
     }
 
-    /**
-     * Test of addFirst method, of class SinglyLinkedList.
-     */
-    @Test
-    public void testAddFirst() {
-        System.out.println("addFirst");
-        Object value = null;
-        SinglyLinkedList instance = new SinglyLinkedList();
-        instance.addFirst(value);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+ 
 
     /**
      * Test of removeFirst method, of class SinglyLinkedList.
@@ -70,11 +61,14 @@ public class SinglyLinkedListTest {
     public void testRemoveFirst() {
         System.out.println("removeFirst");
         SinglyLinkedList instance = new SinglyLinkedList();
-        Object expResult = null;
+        instance.addFirst("1");
+        Object expResult = "1";
         Object result = instance.removeFirst();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+         if(!(result == expResult)){
+            fail("No funciono");
+        }
     }
 
     /**
@@ -84,25 +78,17 @@ public class SinglyLinkedListTest {
     public void testGetFirst() {
         System.out.println("getFirst");
         SinglyLinkedList instance = new SinglyLinkedList();
-        Object expResult = null;
+        Object expResult = "1";
+        instance.addFirst("1");
         Object result = instance.getFirst();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+         if(!(result == expResult)){
+            fail("No funciono");
+        }
     }
 
-    /**
-     * Test of addLast method, of class SinglyLinkedList.
-     */
-    @Test
-    public void testAddLast() {
-        System.out.println("addLast");
-        Object value = null;
-        SinglyLinkedList instance = new SinglyLinkedList();
-        instance.addLast(value);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+   
 
     /**
      * Test of contains method, of class SinglyLinkedList.
@@ -116,7 +102,9 @@ public class SinglyLinkedListTest {
         boolean result = instance.contains(value);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        if(!(result == expResult)){
+            fail("No funciono");
+        }
     }
 
     /**
@@ -125,11 +113,15 @@ public class SinglyLinkedListTest {
     @Test
     public void testPush() {
         System.out.println("push");
-        Object item = null;
+        Object item = "1";
         SinglyLinkedList instance = new SinglyLinkedList();
         instance.push(item);
+        String x = "1";
+        assertEquals(instance.peek(), x );
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        if (!(instance.peek() == x)){
+            fail("No funciono");
+        }
     }
 
     /**
@@ -139,11 +131,14 @@ public class SinglyLinkedListTest {
     public void testPop() {
         System.out.println("pop");
         SinglyLinkedList instance = new SinglyLinkedList();
-        Object expResult = null;
+        Object expResult = "1";
+        instance.push(expResult);
         Object result = instance.pop();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        if(!(result == expResult)){
+            fail("No funciono");
+        }
     }
 
     /**
@@ -153,11 +148,15 @@ public class SinglyLinkedListTest {
     public void testPeek() {
         System.out.println("peek");
         SinglyLinkedList instance = new SinglyLinkedList();
-        Object expResult = null;
+        Object expResult = "1";
+        instance.push("3");
+        instance.push("1");
         Object result = instance.peek();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        if(!(result == expResult)){
+            fail("No funciono");
+        }
     }
     
 }

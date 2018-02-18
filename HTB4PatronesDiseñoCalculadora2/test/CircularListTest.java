@@ -36,31 +36,9 @@ public class CircularListTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of addFirst method, of class CircularList.
-     */
-    @Test
-    public void testAddFirst() {
-        System.out.println("addFirst");
-        Object value = null;
-        CircularList instance = new CircularList();
-        instance.addFirst(value);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+    
 
-    /**
-     * Test of addLast method, of class CircularList.
-     */
-    @Test
-    public void testAddLast() {
-        System.out.println("addLast");
-        Object value = null;
-        CircularList instance = new CircularList();
-        instance.addLast(value);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+    
 
     /**
      * Test of removeFirst method, of class CircularList.
@@ -69,27 +47,17 @@ public class CircularListTest {
     public void testRemoveFirst() {
         System.out.println("removeFirst");
         CircularList instance = new CircularList();
-        Object expResult = null;
+        Object expResult = "1";
+        instance.addFirst("1");
         Object result = instance.removeFirst();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+         if(!(result == expResult)){
+            fail("No funciono");
+        }
     }
 
-    /**
-     * Test of contains method, of class CircularList.
-     */
-    @Test
-    public void testContains() {
-        System.out.println("contains");
-        Object value = null;
-        CircularList instance = new CircularList();
-        boolean expResult = false;
-        boolean result = instance.contains(value);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+   
 
     /**
      * Test of push method, of class CircularList.
@@ -97,11 +65,16 @@ public class CircularListTest {
     @Test
     public void testPush() {
         System.out.println("push");
-        Object item = null;
+        Object item = "1";
         CircularList instance = new CircularList();
         instance.push(item);
+        String x = "1";
+        Object result = instance.pop();
+        assertEquals(result, x );
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        if (!(result == x)){
+            fail("No funciono");
+        }
     }
 
     /**
@@ -111,53 +84,15 @@ public class CircularListTest {
     public void testPop() {
         System.out.println("pop");
         CircularList instance = new CircularList();
-        Object expResult = null;
+         Object expResult = "1";
+        instance.push(expResult);
         Object result = instance.pop();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        if(!(result == expResult)){
+            fail("No funciono");
+        }
     }
 
-    /**
-     * Test of peek method, of class CircularList.
-     */
-    @Test
-    public void testPeek() {
-        System.out.println("peek");
-        CircularList instance = new CircularList();
-        Object expResult = null;
-        Object result = instance.peek();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of size method, of class CircularList.
-     */
-    @Test
-    public void testSize() {
-        System.out.println("size");
-        CircularList instance = new CircularList();
-        int expResult = 0;
-        int result = instance.size();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getFirst method, of class CircularList.
-     */
-    @Test
-    public void testGetFirst() {
-        System.out.println("getFirst");
-        CircularList instance = new CircularList();
-        Object expResult = null;
-        Object result = instance.getFirst();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
+     
 }

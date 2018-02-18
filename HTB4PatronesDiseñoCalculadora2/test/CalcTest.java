@@ -36,46 +36,7 @@ public class CalcTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of getCalc method, of class Calc.
-     */
-    @Test
-    public void testGetCalc() {
-        System.out.println("getCalc");
-        String forma = "";
-        Calc expResult = null;
-        Calc result = Calc.getCalc(forma);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getMiStack method, of class Calc.
-     */
-    @Test
-    public void testGetMiStack() {
-        System.out.println("getMiStack");
-        Calc instance = null;
-        Stack<String> expResult = null;
-        Stack<String> result = instance.getMiStack();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setMiStack method, of class Calc.
-     */
-    @Test
-    public void testSetMiStack() {
-        System.out.println("setMiStack");
-        Stack<String> miStack = null;
-        Calc instance = null;
-        instance.setMiStack(miStack);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+    
 
     /**
      * Test of operar method, of class Calc.
@@ -83,13 +44,15 @@ public class CalcTest {
     @Test
     public void testOperar() {
         System.out.println("operar");
-        String expresion = "";
-        Calc instance = null;
-        double expResult = 0.0;
+        String expresion = "15*4+2-";
+        Calc instance = Calc.getCalc("1");
+        double expResult = 7;
         double result = instance.operar(expresion);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+         if (!(expResult == result)){
+            fail("Fallo en la operación");
+        }
     }
     
 }

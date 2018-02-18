@@ -42,11 +42,15 @@ public class StackArrayListTest {
     @Test
     public void testPush() {
         System.out.println("push");
-        Object item = null;
+        Object item = "1";
         StackArrayList instance = new StackArrayList();
         instance.push(item);
+        String x = "1";
+        assertEquals(instance.peek(), x );
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        if (!(instance.peek() == x)){
+            fail("No funciono");
+        }
     }
 
     /**
@@ -56,11 +60,14 @@ public class StackArrayListTest {
     public void testPop() {
         System.out.println("pop");
         StackArrayList instance = new StackArrayList();
-        Object expResult = null;
+        Object expResult = "1";
+        instance.push(expResult);
         Object result = instance.pop();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        if(!(result == expResult)){
+            fail("No funciono");
+        }
     }
 
     /**
@@ -70,11 +77,15 @@ public class StackArrayListTest {
     public void testPeek() {
         System.out.println("peek");
         StackArrayList instance = new StackArrayList();
-        Object expResult = null;
+        Object expResult = "1";
+        instance.push("3");
+        instance.push("1");
         Object result = instance.peek();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        if(!(result == expResult)){
+            fail("No funciono");
+        }
     }
 
     /**
@@ -88,7 +99,9 @@ public class StackArrayListTest {
         int result = instance.size();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+         if(!(result == expResult)){
+            fail("No funciono");
+        }
     }
 
     /**
@@ -98,11 +111,13 @@ public class StackArrayListTest {
     public void testEmpty() {
         System.out.println("empty");
         StackArrayList instance = new StackArrayList();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.empty();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       if(!(result == expResult)){
+            fail("No funciono");
+        }
     }
     
 }
